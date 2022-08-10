@@ -1,4 +1,9 @@
-export interface User {
-  firstName: string;
-  lastName: string;
+interface User {
+  id: number;
+  name: string;
+  email: string;
 }
+
+export type UserToInsert = Omit<User, 'id'>;
+
+export default User;
